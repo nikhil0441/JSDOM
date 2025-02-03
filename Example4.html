@@ -3,9 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Success And Error</title>
+    <style>
+        .succes {
+            text-align: center;
+            color: blue;
+            text-decoration: dotted;
+        }
+        .error {
+            text-align: center;
+            color: crimson;
+            text-decoration: double;
+        }
+    </style>
 </head>
 <body>
-    
+    <p>Lorem success ipsum dolor sit amet consectetur adipisicing elit...</p>
+    <p>Lorem error ipsum dolor sit amet, consectetur adipisicing elit...</p>
+    <p>Lorem ipsum dolor sit amet error consectetur adipisicing elit...</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit... success</p>
+
+    <script>
+        let allP = document.querySelectorAll("p");
+        let list = Array.from(allP);
+
+        list.forEach((e) => {
+            if (e.textContent.includes("success")) {
+                e.classList.add("succes");
+            } else {
+                e.classList.add("error");
+            }
+        });
+    </script>
 </body>
 </html>
