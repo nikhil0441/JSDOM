@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let count=3;
+        function addpara(){
+            
+            let p=document.createElement("p");
+            let text=document.createTextNode(`This is para ${count++}`);
+            p.appendChild(text);
+            document.body.appendChild(p);
+        }
+    </script>
+</head>
+<body>
+    <p>This is para 1</p>
+    <p>This is para 2</p>
+     <input type="button"  value="add new Para " onclick="addpara()">
+</body>
+</html>
