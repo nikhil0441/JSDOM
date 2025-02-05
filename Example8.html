@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Button Color Change</title>
+</head>
+<body>
+    <!-- <div>
+        <input type="radio" name="color" value="red" id="red">
+        <label for="red">Red</label>
+
+        <input type="radio" name="color" value="blue" id="blue">
+        <label for="blue">Blue</label>
+    </div>
+
+    <script>
+        // Select all radio buttons
+        const radios = document.querySelectorAll('input[name="color"]');
+
+        // Add event listener to change body background color
+        radios.forEach(radio => {
+            radio.addEventListener('change', function() {
+                document.body.style.backgroundColor = this.value;
+            });
+        });
+    </script> -->
+
+
+    <div>
+        <h3>Select an option to change page Background Color</h3>
+        <input type="radio" name="r1" value="red" onclick="changeColor(this)"> Red
+        <br>
+        <input type="radio" name="r2" value="blue" onclick="changeColor(this)"> Blue
+        <br>
+        <input type="radio" name="r3" value="green" onclick="changeColor(this)"> green
+        <br>
+
+    </div>
+    <script>
+        function changeColor(e){
+             document.body.style.backgroundColor = e.value; 
+        }
+    </script>
+</body>
+</html>
