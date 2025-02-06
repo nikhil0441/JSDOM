@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Change on Event</title>
+</head>
+<body>
+    <div>
+        <img id="myImage" src="/Event Level 1/Example2/images/download (3).jpeg" alt="Image" width="300">
+    </div>
+
+    <script >
+      // Ensure the script runs after the page loads
+window.onload = () => {
+  let x = document.querySelector("#myImage"); // Select by ID for better performance
+
+  x.onmouseup = () => {
+    x.src = "/Event Level 1/Example2/images/download (4).jpeg";
+    x.style.width = "300";
+  };
+
+  x.onmouseout = () => {
+    x.src = "/Event Level 1/Example2/images/download (3).jpeg";
+  };
+};
+
+    </script>
+</body>
+</html>
